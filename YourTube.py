@@ -47,9 +47,19 @@ headers = {
 only_entry_tags = SoupStrainer('entry')
 
 with codecs.open('output.html', 'w', 'utf-8') as output_file:
+    output_file.write('''<!DOCTYPE html>
+    <html>
+    <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>YourTube</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>''')
     for sub in subs:
         print('Channel: {}'.format(sub['name']))
-        output_file.write('<div><h2 class="title">Channel: {}</h2>'.format(sub['name'])+'\n')
+        output_file.write('<div class="channel-container"><h2 class="title">Channel: {}</h2>'.format(sub['name'])+'\n')
         print('-'*80)
         output_file.write('<p>'+'-'*80+'</p>'+'\n')
         channel_xml = requests.get(sub['link'], headers=headers)
@@ -66,6 +76,6 @@ with codecs.open('output.html', 'w', 'utf-8') as output_file:
             output_file.write('<p><a class="link" href="{}">'.format(vid['link'])+'{}'.format(vid['title'])+'</a></p>')
         print('-'*80)
         output_file.write('<p>'+'-'*80+'</p></div>'+'\n')
-
+    output_file.write('''</body>\n</html>''')
 print('Completed!')
     
