@@ -8,7 +8,8 @@ this script makes heavy use of the [BeautifulSoup](https://pypi.org/project/Beau
 
 ## todo
 
-1. make script a command line tool that can take input from anywhere and with any file name
-2. add more comments
-3. give script output to a file
-4. possibly fetch thumbnails
+[] make script a command line tool that can take input from anywhere and with any file name
+[] add more comments
+[x] give script output to a file
+[] improve output file (less convoluted method)
+[] possibly fetch thumbnails
