@@ -62,7 +62,7 @@ with codecs.open('output.html', 'w', 'utf-8') as output_file:
             recent_vids.append({'title':title_item, 'link':link_item})
 
         for vid in recent_vids:
-            print('Title: {}'.format(vid['title'])+'\t'+'link: {}'.format(vid['link'])+'\n')
+            print('Title: {}'.format(vid['title'])+'\t'+'link: {}'.format(vid['link']))
             output_file.write('<p><a class="link" href="{}">'.format(vid['link'])+'{}'.format(vid['title'])+'</a></p>')
         print('-'*80)
         output_file.write('<p>'+'-'*80+'</p></div>'+'\n')
