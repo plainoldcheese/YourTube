@@ -12,4 +12,4 @@ this script makes heavy use of the [BeautifulSoup](https://pypi.org/project/Beau
 [] add more comments
 [x] give script output to a file
 [] improve output file (less convoluted method)
-[] possibly fetch thumbnails
+[] fetch thumbnails

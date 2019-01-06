@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+    div{
+        width: 40ch !important;
+    }
+  }
+
+body {
+    background: white;
+    color: black;
+    font-family: Consolas, monospace;
+    text-decoration: none;
+    text-align: left;
+    align-content: center;
+}
+div{
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+}
+a:visited, a:hover, a:active, a:any-link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: gray;
+}
