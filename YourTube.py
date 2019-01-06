@@ -4,24 +4,42 @@ import codecs
 import os
 from bs4 import BeautifulSoup, SoupStrainer
 
+#======================================output to file functions=================================#
 
-
-def write_to_html(subscription ,videos):
+def write_to_html(subscription, videos):
     '''
     takes in dictionary of subscription and list of dictionaries of recent videos and writes outptu to an html document
     '''
     with codecs.open('output/temp.html', 'a+', 'utf-8') as output_file:
         # start html doc
-        html_template = '''
-                <!DOCTYPE html>
-                <html>
-                <head>
-                        <meta charset="utf-8" />
-                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                        <title>YourTube</title>
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-                        <style>
+        output_file.write('<div class="channel-container"><h2 class="title">Channel: {}</h2>'.format(subscription['name'])+'\n')
+        output_file.write('<p>'+'-'*80+'</p>'+'\n') # divider
+
+        for vid in videos:
+            output_file.write(
+                '<div class="video">'+'\n'+
+                    '<img class="thumbnail" src="{}"></img>'.format(vid['thumb'])+'\n'+
+                    '<a class="link" href="{}">'.format(vid['link'])+'{}'.format(vid['title'])+'</a>'+'\n'+
+                '</div>'
+                )
+        output_file.write('<p>'+'-'*80+'</p></div>'+'\n') # divider
+        
+        output_file.write('''</body>\n</html>''') # end tags
+        
+
+def prepend_html():
+    '''
+    prepend html_template to beginning of file
+    '''
+    html_template = ''' <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <meta charset="utf-8" />
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <title>YourTube</title>
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+                            <style>
                             @media only screen and (max-width: 600px) {
                                 div {
                                     width: 40ch !important;
@@ -76,32 +94,14 @@ def write_to_html(subscription ,videos):
                                 position: relative;
                                 vertical-align: middle;
                             }
-                        </style>
-                </head>
-                <body>
-                '''
-        output_file.write('<div class="channel-container"><h2 class="title">Channel: {}</h2>'.format(subscription['name'])+'\n')
-        output_file.write('<p>'+'-'*80+'</p>'+'\n') # divider
-
-        for vid in videos:
-            output_file.write(
-                '<div class="video">'+'\n'+
-                    '<img class="thumbnail" src="{}"></img>'.format(vid['thumb'])+'\n'+
-                    '<a class="link" href="{}">'.format(vid['link'])+'{}'.format(vid['title'])+'</a>'+'\n'+
-                '</div>'
-                )
-        output_file.write('<p>'+'-'*80+'</p></div>'+'\n') # divider
-        
-        output_file.write('''</body>\n</html>''') # end tags
-        
-    # prepend html_template to beginning of file
+                            </style>
+                        </head>
+                        <body>'''
     with codecs.open('output/temp.html', 'r', 'utf-8') as f:
         with codecs.open('output/output.html','w', 'utf-8') as f2: 
             f2.write(html_template)
             f2.write(f.read())
-
     os.remove('output/temp.html')
-
 
 def write_to_txt(subscription ,videos):
     '''
@@ -129,6 +129,7 @@ def write_to_md(subscription, videos):
             output_file.write('{}. [{}]({})'.format(count, vid['title'], vid['link'])+'\n')
 
 
+#=======================================scraping functions=======================================#
 def get_subs_from_xml(filename):
     '''
     returns a list of xml urls of the channels from the 'subscription_manager' file
@@ -173,7 +174,7 @@ def get_videos_from_sub(subscription):
         )
     return recent_vids
 
-
+#==============================================main==============================================#
 if __name__ == "__main__":
 
     sub_manager_link = 'https://www.youtube.com/subscription_manager'
@@ -213,7 +214,8 @@ if __name__ == "__main__":
         write_to_html(sub, videos)
         write_to_txt(sub, videos)
         write_to_md(sub, videos)
-
+    prepend_html()
+    
     print('-'*80)
     print('Completed!')
     # open output file in browser

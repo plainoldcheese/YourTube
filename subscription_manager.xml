@@ -1,36 +1,11 @@
 <opml version="1.1">
-
     <body>
         <outline text="YouTube Subscriptions" title="YouTube Subscriptions">
             <outline text="Corey Schafer" title="Corey Schafer" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCCezIgC97PvUuR4_gbFUs5g" />
-            <outline text="Matt D'Avella" title="Matt D'Avella" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCJ24N4O0bP7LGLBDvye7oCA" />
-            <outline text="Luke Smith" title="Luke Smith" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA" />
-            <outline text="Linus Tech Tips" title="Linus Tech Tips" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw" />
-            <outline text="Darryl Syms" title="Darryl Syms" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCKjpZzkRIqLi-rJGK-7XeXQ" />
-            <outline text="Thomas Frank" title="Thomas Frank" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCG-KntY7aVnIGXYEBQvmBAQ" />
-            <outline text="Quentin Watt Tutorials" title="Quentin Watt Tutorials" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCtGGGu_hp8ToQ9BR6Vni19w" />
-            <outline text="The Good Christian Music Blog" title="The Good Christian Music Blog" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC7BHblJg0bOfE3g7FKc260g" />
-            <outline text="TechLinked" title="TechLinked" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCeeFfhMcJa1kjtfZAGskOCA" />
-            <outline text="Marques Brownlee" title="Marques Brownlee" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ" />
             <outline text="sentdex" title="sentdex" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCfzlCWGWYyIQ0aLC5w48gBQ" />
             <outline text="Computerphile" title="Computerphile" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA" />
-            <outline text="Adam Savage’s Tested" title="Adam Savage’s Tested" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA" />
-            <outline text="LGR" title="LGR" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCLx053rWZxCiYWsBETgdKrQ" />
             <outline text="Coding Tech" title="Coding Tech" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCtxCXg-UvSnTKPOzLH4wJaQ" />
-            <outline text="3Blue1Brown" title="3Blue1Brown" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" />
-            <outline text="Rick Beato" title="Rick Beato" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCJquYOG5EL82sKTfH9aMA9Q" />
-            <outline text="Matthew Mole" title="Matthew Mole" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC7eC7tB1XgoZqSXkJvxpctw" />
-            <outline text="Adam Neely" title="Adam Neely" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCnkp4xDOwqqJD7sSM3xdUiQ" />
-            <outline text="Techquickie" title="Techquickie" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC0vBXGSyV14uvJ4hECDOl0Q" />
-            <outline text="Paul Davids" title="Paul Davids" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC_Oa7Ph3v94om5OyxY1nPKg" />
-            <outline text="chicagomusicexchange" title="chicagomusicexchange" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCI5tGbwiVHy4BsZUXcSWvwQ" />
-            <outline text="gameranx" title="gameranx" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCNvzD7Z-g64bPXxGzaQaa4g" />
-            <outline text="Reverb" title="Reverb" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHP-KQAJgXu4Wo2Xq4-eNow" />
             <outline text="The Coding Train" title="The Coding Train" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCvjgXvBlbQiydffZU7m1_aw" />
-            <outline text="The Linux Gamer" title="The Linux Gamer" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCv1Kcz-CuGM6mxzL3B1_Eiw" />
-            <outline text="ANDREW HUANG" title="ANDREW HUANG" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCdcemy56JtVTrsFIOoqvV8g" />
-            <outline text="Jabrils" title="Jabrils" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCQALLeQPoZdZC4JNUboVEUg" />
-            <outline text="Robert Baker" title="Robert Baker" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCfeviwU6C7kEjpOK4C6myuQ" />
         </outline>
     </body>
 </opml>
