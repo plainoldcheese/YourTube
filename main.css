@@ -1,8 +1,8 @@
 @media only screen and (max-width: 600px) {
-    div{
+    div {
         width: 40ch !important;
     }
-  }
+}
 
 body {
     background: white;
@@ -12,33 +12,43 @@ body {
     text-align: left;
     align-content: center;
 }
-div{
+
+div {
     width: 80ch;
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: break-word;
     word-wrap: break-word;
-
 }
-.video{
+
+a:visited, a:hover, a:active, a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+img {
+    height: 100px;
+    width: auto;
+    order: 0;
+    margin: 0px 10px 0px 0px;
+}
+
+.link {
+    order: 1;
+}
+
+.video {
     display: flex;
+    position: relative;
     flex-direction: row;
     margin: 20px 0px 20px 0px;
 }
 
-a:visited, a:hover, a:active, a:any-link{
-    text-decoration: none;
-    color: black;
-}
-a:hover{
-    color: gray;
-}
-img{
-    height: 100px;
-    width: auto;
-    order: 0;
-}
-.link{
-    order: 1;
+.video a {
+    position: relative;
     vertical-align: middle;
 }
