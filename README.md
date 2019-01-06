@@ -9,7 +9,9 @@ this script makes heavy use of the [BeautifulSoup](https://pypi.org/project/Beau
 ## todo
 
 [] make script a command line tool that can take input from anywhere and with any file name
-[] add more comments
+[] add ability to choose number of listings per channel
+[] add ability to input channel urls (as comma separated list)
+[x] add more comments
 [x] give script output to a file
-[] improve output file (less convoluted method)
-[] fetch thumbnails
+[x] improve output file (less convoluted method), ✔ made file more modular by separating it into functions that can write a txt andhtml file 
+[x] fetch thumbnails
