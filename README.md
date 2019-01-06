@@ -4,9 +4,9 @@ take back control of your youtube consumption. this script uses the [XML rss fee
 
 ## examples of output
 
-1. [txt](output/output.txt)
-2. [markdown](output/output.md)
-3. [html](output/output.html)
+1. [txt](docs/output/output.txt)
+2. [markdown](docs/output/output.md)
+3. [html](docs/output/output.html)
 
 ## Modules used
 
