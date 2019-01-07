@@ -22,5 +22,5 @@ the following is yet to be implemented.
   - `-l` write list of links to stdout for use with piping into other scripts
   - `-i` feed in custom input (channel urls comma separated). example `yourtube -i channelurl, channelurl2 -o md`
   - `-n` number of videos per channel to fetch
-- add ability to choose number of listings per channel
+- add ability to choose number of listings per channel ✅
 - add ability to input channel urls (as comma separated list)

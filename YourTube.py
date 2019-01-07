@@ -1,3 +1,4 @@
+import itertools
 import webbrowser
 import requests
 import codecs
@@ -138,15 +139,15 @@ def get_subs_from_xml(filename):
     subscriptions = []
     with codecs.open(filename, 'r', 'utf-8') as f:
         soup=BeautifulSoup(f, 'xml', parse_only=only_outline_tags)
-        for outline_tag in soup.find_all('outline'):
+        for outline_tag in  itertools.islice(soup.find_all('outline'),1,None):
             link = outline_tag.get('xmlUrl')
             name = outline_tag.get('text')
             subscriptions.append({'name':name, 'link':link})
-        subscriptions.remove({'name':'YouTube Subscriptions', 'link':None})
+        # subscriptions.remove({'name':'YouTube Subscriptions', 'link':None})
     return subscriptions
 
 
-def get_videos_from_sub(subscription): 
+def get_videos_from_sub(subscription, num_vids): 
     '''
     takes a dictionary with info about subscriptions and returns list of dictionaries with videos, titles and thumbnails for each channel
     '''
@@ -161,7 +162,12 @@ def get_videos_from_sub(subscription):
     soup = BeautifulSoup(xml_doc, 'xml', parse_only=only_entry_tags)
 
     recent_vids = []
+    stop_count = 0
     for entry_tags in soup:
+        if stop_count == num_vids:
+            break
+        else:
+            stop_count += 1
         link_item = entry_tags.find('link').get('href')
         title_item =  entry_tags.find('title').text
         thumbnail_item = entry_tags.find('media:thumbnail').get('url')
@@ -197,6 +203,10 @@ if __name__ == "__main__":
     else:
         exit()
 
+    
+    # make output directory if none exists
+    if not os.path.isdir('output'):
+        os.mkdir('output')
     # delete existing output files if they exist
     if os.path.isdir('output/output.txt'):
         os.remove('output/output.txt')
@@ -208,9 +218,15 @@ if __name__ == "__main__":
     subs = get_subs_from_xml('subscription_manager.xml')
     videos = []
 
+    num_vids_per_channel = int(input('please enter teh number of recent videos per channel'))
+    NUMBERS = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    
+    if num_vids_per_channel > 15 or num_vids_per_channel not in NUMBERS or num_vids_per_channel == 0:
+        num_vids_per_channel = 15
+
     for sub in subs:
         print('fetching videos for {}...'.format(sub['name']))
-        videos = get_videos_from_sub(sub)
+        videos = get_videos_from_sub(sub, num_vids_per_channel)
         write_to_html(sub, videos)
         write_to_txt(sub, videos)
         write_to_md(sub, videos)
