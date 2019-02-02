@@ -233,7 +233,10 @@ if __name__ == "__main__":
     prepend_html()
     
     print('-'*80)
+
     print('Completed!')
-    # open output file in browser
-    webbrowser.open('output/output.html')    
-    
+    if input('would you like to oopen the lastest subscriptions in the browser? (y)es/(n)o') == 'y':
+        # open output file in browser
+        webbrowser.open('output/output.html')    
+    else:
+        pass
