@@ -24,3 +24,4 @@ the following is yet to be implemented.
   - `-n` number of videos per channel to fetch
 - add ability to choose number of listings per channel ✅
 - add ability to input channel urls (as comma separated list)
+- add youtube-dl support to download list of videos
